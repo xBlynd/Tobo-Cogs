@@ -129,7 +129,7 @@ class Strikes(commands.Cog):
                 (member.id, member.guild.id),
             )
             result = cursor.fetchall()
-        await self.create_case(member, now, reason, moderator)
+        # await self.create_case(member, now, reason, moderator)
         return [row["id"] for row in result]
 
     async def create_case(
